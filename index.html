@@ -49,16 +49,12 @@
 
 <script>
   /* ==========================================================
-     THE ONLY LINE YOU EVER NEED TO CHANGE.
+     THE ONLY LINE YOU EVER NEED TO CHANGE is the one starting
+     with  var TARGET =  just below this comment.
 
-     Paste the "Publish to web" URL of the CURRENT tab here.
-     It looks like:
-     https://docs.google.com/spreadsheets/d/e/2PACX-.../pubhtml?gid=...&single=true
-
-     Change this one line and every printed QR code follows,
-     with no reprinting.
+     Change it and every printed QR code follows, no reprinting.
      ========================================================== */
-  var TARGET = "PASTE_THE_PUBLISHED_URL_HERE";
+  var TARGET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhSuGzcunMqAuPm52qUwiYvynV0hazm2MpJQrPFKUFsPofccj5ws4PaVcZqlg3DUyIxjeOuP-myXxf/pubhtml?gid=478387294&single=true&widget=false&chrome=false&headers=false";
 
   document.getElementById("link").href = TARGET;
   if (TARGET.indexOf("PASTE_") !== 0) { location.replace(TARGET); }
@@ -66,8 +62,9 @@
 
 <noscript>
   <p style="margin-top:1rem">
-    var TARGET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhSuGzcunMqAuPm52qUwiYvynV0hazm2MpJQrPFKUFsPofccj5ws4PaVcZqlg3DUyIxjeOuP-myXxf/pubhtml?gid=478387294&single=true&widget=false&chrome=false&headers=false";
+    JavaScript is off. Ask the RA duty team for the roster link.
   </p>
 </noscript>
 </body>
 </html>
+
