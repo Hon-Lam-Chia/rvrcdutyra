@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RVRC RA Duty Roster</title>
+<style>
+  :root { --purple:#66457E; --teal:#2A9D8F; --ink:#2b2b2b; --bg:#ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --ink:#ececec; --bg:#1b1b1f; }
+  }
+  * { box-sizing:border-box; }
+  html,body { height:100%; }
+  body {
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    display:flex; align-items:center; justify-content:center;
+    padding:16px; text-align:center;
+  }
+  main { max-width:420px; width:100%; }
+  h1 { font-size:1.25rem; margin:0 0 .35rem; color:var(--purple); letter-spacing:.01em; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) h1 { color:#b79ad0; }
+  }
+  .sub { font-size:.9rem; opacity:.7; margin:0 0 1.6rem; }
+  .spinner {
+    width:34px; height:34px; margin:0 auto 1.2rem;
+    border:3px solid rgba(128,128,128,.25); border-top-color:var(--teal);
+    border-radius:50%; animation:spin .9s linear infinite;
+  }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spinner { animation:none; } }
+  a.btn {
+    display:inline-block; margin-top:.4rem; padding:.7rem 1.1rem;
+    background:var(--purple); color:#fff; text-decoration:none;
+    border-radius:8px; font-size:.95rem;
+  }
+  .note { font-size:.78rem; opacity:.55; margin-top:1.8rem; line-height:1.5; }
+</style>
+</head>
+<body>
+<main>
+  <div class="spinner" aria-hidden="true"></div>
+  <h1>RVRC RA Duty Roster</h1>
+  <p class="sub">Opening this month&rsquo;s roster&hellip;</p>
+  <p><a class="btn" id="link" href="#">Open the roster</a></p>
+  <p class="note">If nothing happens, tap the button above.</p>
+</main>
+
+<script>
+  /* ==========================================================
+     THE ONLY LINE YOU EVER NEED TO CHANGE.
+
+     Paste the "Publish to web" URL of the CURRENT tab here.
+     It looks like:
+     https://docs.google.com/spreadsheets/d/e/2PACX-.../pubhtml?gid=...&single=true
+
+     Change this one line and every printed QR code follows,
+     with no reprinting.
+     ========================================================== */
+  var TARGET = "PASTE_THE_PUBLISHED_URL_HERE";
+
+  document.getElementById("link").href = TARGET;
+  if (TARGET.indexOf("PASTE_") !== 0) { location.replace(TARGET); }
+</script>
+
+<noscript>
+  <p style="margin-top:1rem">
+    JavaScript is off. Ask the RA duty team for the roster link.
+  </p>
+</noscript>
+</body>
+</html>
